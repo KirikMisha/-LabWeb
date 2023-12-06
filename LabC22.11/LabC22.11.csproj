@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-LabC22._11-60CA00F1-F22A-4369-A390-603CA55BA74E</UserSecretsId>
+        <RootNamespace>LabC22._11</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="IKVM" Version="8.7.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.13"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.13"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.13"/>
+        <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.13"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Settings\Settings.cshtml" />
+    </ItemGroup>
+
+</Project>

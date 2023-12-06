@@ -1,0 +1,29 @@
+@page
+@model FriendSearchModel
+@{
+    ViewData["Title"] = "Friend Search";
+}
+<link rel="stylesheet" href="~/css/styles.css">
+<h2>@ViewData["Title"]</h2>
+
+<form method="get">
+    <label for="participants">Number of Participants:</label>
+    <input type="number" id="participants" name="participants" min="1" value="1" />
+    <button type="submit">Search</button>
+</form>
+
+@if (Model.ActivityResult != null)
+{
+    <h3>Random Activity for Friends:</h3>
+    <p><strong>Activity:</strong> @Model.ActivityResult.Activity</p>
+    <p><strong>Type:</strong> @Model.ActivityResult.Type</p>
+    <p><strong>Participants:</strong> @Model.ActivityResult.Participants</p>
+}
+
+<p>
+    <a class="btn btn-primary" asp-page="/Index">Go back to Home</a>
+    <a class="btn btn-info" asp-page="/Profile/Profile">Go to Profile</a>
+</p>
+@section Scripts {
+    <script src="~/js/theme.js"></script>
+}

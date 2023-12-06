@@ -1,0 +1,21 @@
+@page
+@model ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<link rel="stylesheet" href="~/css/styles.css">
+
+<h2>@ViewData["Title"]</h2>
+
+
+<p>
+    <a class="btn btn-primary" asp-page="/Index">Go back to Home</a>
+    <a class="btn btn-secondary" asp-page="/FriendSearch/FriendSearch">Go to Friend Search</a>
+</p>
+
+<button onclick="toggleTheme()">Toggle Theme</button>
+
+@section Scripts {
+    <script src="~/js/theme.js"></script>
+}

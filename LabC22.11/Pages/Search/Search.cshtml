@@ -1,0 +1,32 @@
+@page
+@model LabC22._11.Pages.Search.SearchModel
+
+@{
+    ViewData["Title"] = "Search";
+}
+<link rel="stylesheet" href="~/css/styles.css">
+<h2>@ViewData["Title"]</h2>
+
+<form method="get">
+    <label for="activityType">Activity Type:</label>
+    <select id="activityType" name="activityType">
+        <option value="recreational">Recreational</option>
+        <option value="education">Education</option>
+    </select>
+    <button type="submit">Search</button>
+    <p>
+        <a class="btn btn-secondary" asp-page="/FriendSearch/FriendSearch">Go to Friend Search</a>
+        <a class="btn btn-info" asp-page="/Profile/Profile">Go to Profile</a>
+    </p>
+</form>
+
+@if (Model.ActivityResult != null)
+{
+    <h3>Random Activity:</h3>
+    <p><strong>Activity:</strong> @Model.ActivityResult.Activity</p>
+    <p><strong>Type:</strong> @Model.ActivityResult.Type</p>
+    <p><strong>Participants:</strong> @Model.ActivityResult.Participants</p>
+}
+@section Scripts {
+    <script src="~/js/theme.js"></script>
+}
