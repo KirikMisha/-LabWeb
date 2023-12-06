@@ -25,6 +25,12 @@
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Pages\Settings\Settings.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Example\Example.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+      <Folder Include="List\" />
     </ItemGroup>
 
 </Project>

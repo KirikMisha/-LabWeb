@@ -1,0 +1,37 @@
+@page
+@model LabC22._11.Pages.List.ListModel
+@{
+    ViewData["Title"] = "Word List";
+}
+
+<link rel="stylesheet" href="~/css/styles.css">
+
+<h2>Words List</h2>
+
+@if (Model.Words.Any())
+{
+    <ul>
+        @foreach (var word in Model.Words)
+        {
+            <li>@word.word</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No words available.</p>
+}
+
+<h2>Add New Word</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="newWord">New Word:</label>
+        <input type="text" class="form-control" id="newWord" name="newWord" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Word</button>
+</form>
+
+@section Scripts {
+    <script src="~/js/theme.js"></script>
+}

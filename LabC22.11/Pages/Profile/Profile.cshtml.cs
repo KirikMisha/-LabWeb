@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+namespace LabC22._11.Pages.Profile;
+
 public class ProfileModel : PageModel
 {
     private readonly UserManager<IdentityUser> _userManager;

@@ -1,7 +1,9 @@
+using LabC22._11.Pages.Search;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
-using LabC22._11.Pages.Search;
+
+namespace LabC22._11.Pages.FriendSearch;
 
 public class FriendSearchModel : PageModel
 {
